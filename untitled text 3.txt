@@ -1,0 +1,5 @@
+# program to count the number of files in a folder 
+import os,os.path 
+list = os.listdir(dir)
+number_files = len(list)
+print number_files
