@@ -1,35 +1,14 @@
-new=True;
-while new:
-	print("1 = Add")
-    print("2 = Sub")
-    print("3 = Multiply")
-    print("4 = Division")
-    print("5 = Exit program")
-	cmd=int((input("Enter the operation to be performed: "))
-	if cmd == 1:
-		print("Add")
-	    a=int(input("Enter the first number: "))
-        b=int(input("Enter the second number:"))
-        result=a + b
-        print (a ,'+' ,b ,'=' , result)
-    elif cmd ==2:
-        print("Subtraction")
-        a = int(input("Enter first number :"))
-        b = int(input("Enter secund number :"))
-        result = a - b
-        print(a ,"-" , b ,"=" , result)
-    elif cmd == 3:
-        print("Multiply")
-        a = int(input("Enter first number :"))
-        b = int(input("Enter secund number :"))
-        result = a * b
-        print(a ,"*" ,b ,"=" , result)
-    elif cmd == 4:
-        print("Division")
-        a = int(input("Enter first number :"))
-        b = int(input("Enter secund number :"))
-        result = a / b
-        print(a ,"/" ,b ,"=" , result)
-    elif cmd == 5:
-        print("Quit!")
-        new = False
+m=True
+while m:
+	a=raw_input("Enter the First number:")
+	b=raw_input("Enter the Second number:")
+    if (add == a+b):
+		print("The sum is %d"%add)
+	elif (sub == a - b):
+	 	print("The sub of num %d"%sub)
+	elif (mul == a * b):
+		print(" The Multiply of 2 %d"%mul)
+	elif (div == a / b):
+		print("The divison of 2 number %d"%div)
+	else:
+			print"Sorry ,wrong input"

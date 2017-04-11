@@ -1,0 +1,5 @@
+# a program to test while condition
+spam=0
+while spam<5 :
+  print "Hello world"
+  spam=+1
