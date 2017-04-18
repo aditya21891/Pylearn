@@ -1,0 +1,11 @@
+# A python script to show number of string occurrences in a file.
+from sys import argv 
+script,file=argv 
+trgt=open(file,'r')
+cnt=0
+fstr=trgt.readlines()
+for i in fstr:
+	if "arun" in i:
+		cnt=cnt+1
+print(cnt)
+trgt.close()
