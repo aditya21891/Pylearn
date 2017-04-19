@@ -1,4 +1,4 @@
-arun works in Google as an SRE 
-arun is mainly responsible for keeping services up and running 
-arun writes python scripts as part of work.
-arun is married to himabindu 
+adi works in Google as an SRE 
+adi is mainly responsible for keeping services up and running 
+adi writes python scripts as part of work.
+adi loves devops. 

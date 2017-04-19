@@ -1,0 +1,7 @@
+#  A python script to read Link from text file and display the movie names in website 
+from sys import argv 
+import urllib2
+script,file=argv 
+response=urllib2.urlopen(trgturl)
+for i in response:
+	print i
