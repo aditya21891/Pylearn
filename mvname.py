@@ -1,5 +1,4 @@
-#  A python script to read Link from text file and display the movie names in website 
-from urlparse import urlparse 
+#  A python script to display the movie names in the website and other urls in this website.
 import urllib2
 import re 
 from bs4 import BeautifulSoup

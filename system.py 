@@ -1,2 +1,0 @@
-# program to read the files in a folder 
-from sys import argv 
