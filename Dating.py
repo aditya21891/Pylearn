@@ -1,7 +1,7 @@
-# program for input
+# program to find the dating age
 nam=raw_input("Enter your name: ")
 age=raw_input("Enter your age : ")
-if (age == 21):
+if (age >= 21):
   print "Ready to date "
 else:
-      print "Find a new Partner"
+      print "Not good for dating"
