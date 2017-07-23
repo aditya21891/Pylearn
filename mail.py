@@ -1,38 +1,28 @@
 import smtplib
-import time
-import imaplib
-import email
+from email.MIMEMultipart import MIMEMultipart 
+# mutiple parts 
+from email.MIMEText import MIMEText 
+from email.utils import getaddresses
 
-# -------------------------------------------------
-#
-# Utility to read email from Gmail Using Python
-#
-# ------------------------------------------------
+sa="prattiaditya@gmail.com"
+ta="adityapratti01@gmail.com" 
+body="I am learning mail through python"
 
-def read_email_from_gmail():
-    try:
-        mail = imaplib.IMAP4_SSL(SMTP_SERVER)
-        mail.login(FROM_EMAIL,FROM_PWD)
-        mail.select('inbox')
+uname="prattiaditya"
+pwd='marMAG91$'
 
-        type, data = mail.search(None, 'ALL')
-        mail_ids = data[0]
+msg=MIMEMultipart()
+msg['From']=sa
+msg['To']=ta
+msg['Subject']='Message for myself'
+msg.attach=MIMEText(body)
 
-        id_list = mail_ids.split()
-        first_email_id = int(id_list[0])
-        latest_email_id = int(id_list[-1])
+srvr=smtplib.SMTP('smtp.gmail.com:587')
 
+srvr.ehlo()
+srvr.starttls()
+srvr.ehlo() 
 
-        for i in range(latest_email_id,first_email_id, -1):
-            typ, data = mail.fetch(i, '(RFC822)' )
-
-            for response_part in data:
-                if isinstance(response_part, tuple):
-                    msg = email.message_from_string(response_part[1])
-                    email_subject = msg['subject']
-                    email_from = msg['from']
-                    print 'From : ' + email_from + '\n'
-                    print 'Subject : ' + email_subject + '\n'
-
-    except Exception, e:
-        print str(e)
+srvr.login(uname,pwd)
+srvr.sendmail(sa,ta,msg.as_string())
+srvr.quit()
