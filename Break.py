@@ -2,5 +2,6 @@
 import webbrowser 
 import time 
 
-time.sleep(60)
-webbrowser.open("https://www.youtube.com/watch?v=jIqRbFQl-ds")
+for x in range(4):
+  time.sleep(2*60)
+  webbrowser.open("https://www.youtube.com/watch?v=jIqRbFQl-ds")
