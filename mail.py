@@ -8,8 +8,8 @@ sa="prattiaditya@gmail.com"
 ta="adityapratti01@gmail.com" 
 body="I am learning mail through python"
 
-uname="prattiaditya"
-pwd='marMAG91$'
+uname="/your username/"
+pwd='/your password/'
 
 msg=MIMEMultipart()
 msg['From']=sa
