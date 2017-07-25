@@ -6,7 +6,10 @@ from email.utils import getaddresses
 
 sa="prattiaditya@gmail.com"
 ta="adityapratti01@gmail.com" 
-body="I am learning mail through python"
+
+text = "Hi Adi!\nThank you\nHave a good day\n"
+
+
 
 uname="/your username/"
 pwd='/your password/'
@@ -15,7 +18,9 @@ msg=MIMEMultipart()
 msg['From']=sa
 msg['To']=ta
 msg['Subject']='Message for myself'
-msg.attach=MIMEText(body)
+part1 = MIMEText(text, 'plain')
+msg.attach(part1)
+
 
 srvr=smtplib.SMTP('smtp.gmail.com:587')
 

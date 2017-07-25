@@ -1,4 +1,6 @@
 # python script to create a file and erase contents
+
+
 from sys import argv 
 script, filename = argv
 
