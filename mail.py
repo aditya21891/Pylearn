@@ -1,33 +1,33 @@
 import smtplib
-from email.MIMEMultipart import MIMEMultipart 
-# mutiple parts 
-from email.MIMEText import MIMEText 
-from email.utils import getaddresses
+from email.MIMEMultipart import MIMEMultipart
+from email.MIMEText import MIMEText
+from email.MIMEBase import MIMEBase
+from email import encoders
+ 
+ 
+fromaddr ="adityapratti01@gmail.com"
+toaddr = "ravi@galaxyitech.com"
+msg = MIMEMultipart()
+msg['From'] = fromaddr
+msg['To'] = toaddr
+msg['Subject'] = "Example to send email through python"
+ 
+body = "Hi Ravi \n I am attaching the current resume"
+msg.attach(MIMEText(body, 'plain'))
 
-sa="prattiaditya@gmail.com"
-ta="adityapratti01@gmail.com" 
+filename =("AdityaDevopsResume.docx")
+attachment = open("/Users/adityapratti/Desktop/DevopsResumes/AdityaDevopsResume.docx","rb")
 
-text = "Hi Adi!\nThank you\nHave a good day\n"
+part=MIMEBase('application', 'octet-stream')
+part.set_payload((attachment).read())
+encoders.encode_base64(part)
+part.add_header('Content-Disposition', "attachment; filename= %s" % filename)
+msg.attach(part)
+ 
+server = smtplib.SMTP('smtp.gmail.com', 587)
+server.starttls()
+server.login(fromaddr, "iamcool9$")
+text = msg.as_string()
+server.sendmail(fromaddr, toaddr, text)
+server.quit()
 
-
-
-uname="/your username/"
-pwd='/your password/'
-
-msg=MIMEMultipart()
-msg['From']=sa
-msg['To']=ta
-msg['Subject']='Message for myself'
-part1 = MIMEText(text, 'plain')
-msg.attach(part1)
-
-
-srvr=smtplib.SMTP('smtp.gmail.com:587')
-
-srvr.ehlo()
-srvr.starttls()
-srvr.ehlo() 
-
-srvr.login(uname,pwd)
-srvr.sendmail(sa,ta,msg.as_string())
-srvr.quit()
