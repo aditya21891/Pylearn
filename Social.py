@@ -12,5 +12,9 @@ def fullcontact(email):
 
 
     print jsonData
+    photos=jsonData['photos']
+
+    for item in photos:
+        print item['url']
 
 fullcontact("prattiaditya@gmail.com")
