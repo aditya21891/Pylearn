@@ -1,4 +1,4 @@
-#Sample python game 
+#Sample python game which guesses animal names from a weblink 
 #!/usr/bin/env python
 #!/usr/bin/env python
 
