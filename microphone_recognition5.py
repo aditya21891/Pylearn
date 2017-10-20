@@ -1,3 +1,4 @@
+# this program is to control our machine with speech .
 from pygame import mixer;from subprocess import call;import time
 import pywapi; import speech_recognition as sr
 mixer.init() #you must initialize the mixer
