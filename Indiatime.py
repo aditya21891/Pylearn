@@ -1,5 +1,6 @@
 # This script to view the currrent India time.
 import webbrowser
-new=2;
-url="https://www.timeanddate.com/worldclock/india"
-webbrowser.open(url,new=new)
+new=1;
+ind_time="https://www.timeanddate.com/worldclock/india"
+webbrowser.get('safari').open_new(ind_time)
+webbrowser.get('google-chrome').open_new(ind_time)

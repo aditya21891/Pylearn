@@ -1,0 +1,19 @@
+#  A python example with Tkinter for clothes and shoes 
+
+import Tkinter as tk
+
+window=tk.TK()
+window.geometry("300*200")
+
+
+alabel=tk.label(text="Clothes")
+alabel.grid(column=0,row=0)
+
+blabel=tk.label(text="Shoes")
+blabel.grid(column=1,row=0)
+
+button=tk.Button(text="5")
+button.grid(column=0)
+
+button2=tk.Button(text="5")
+button2.grid(column=1,row=1)
