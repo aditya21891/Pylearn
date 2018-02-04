@@ -8,10 +8,10 @@ from email.MIMEBase import MIMEBase
 from email import encoders
 
 sa="adityapratti01@gmail.com"
-ta="prattiaditya@gmail.com" 
+ta="Sai@galaxyitech.com"" 
 
 # content of email
-text = "Hi Ravi! \n Thank you \n Have a good day\n"
+text = "Hi Sai! \n Thank you \n Have a good day\n"
 
 uname="adityapratti01"
 pwd='iamcool9$'
@@ -19,7 +19,7 @@ pwd='iamcool9$'
 msg=MIMEMultipart()
 msg['From']=sa
 msg['To']=ta
-msg['Subject']='Message for Ravi'
+msg['Subject']='Message for Sai'
 part1 = MIMEText(text, 'plain')
 msg.attach(part1)
 
