@@ -11,5 +11,5 @@ for num in range(lower,upper + 1):
          print(num)
          primes.append(num)
 
-for i in reverse
+for i in reverse:
     print primes[i]
