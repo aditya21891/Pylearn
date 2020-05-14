@@ -1,2 +1,2 @@
-# mypyscripts
-This is used as my play ground to Learn python.
+# This repo is used to Learn Python 
+
